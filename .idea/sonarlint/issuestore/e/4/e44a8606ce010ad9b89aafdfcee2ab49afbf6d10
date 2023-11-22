@@ -1,0 +1,21 @@
+
+c
+java:S1192"FDefine a constant instead of duplicating this literal "pollo" 3 times.(ê‘î¨8êĞë°¿1
+h
+java:S1192"FDefine a constant instead of duplicating this literal "pesce" 3 times.(€Œ³åùÿÿÿÿ8êĞë°¿1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê‘î¨8êĞë°¿1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Œ³åùÿÿÿÿ8êĞë°¿1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é·í¦ıÿÿÿÿ8êĞë°¿1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÇ«¢úÿÿÿÿ8êĞë°¿1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Ê´ôşÿÿÿÿ8ëĞë°¿1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¶â‹øÿÿÿÿ8ëĞë°¿1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹º›Úùÿÿÿÿ8ëĞë°¿1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÂÇ¬8ëĞë°¿1
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÿ¢Êşÿÿÿÿ8ëĞë°¿1
+7
+java:S1220""Move this file to a named package.8ëĞë°¿1
+G	java:S106%"+Replace this use of System.out by a logger.(á¼ÓÈ8öĞë°¿1
+L	java:S106&"+Replace this use of System.out by a logger.(‹¼¯øÿÿÿÿ8öĞë°¿1
+F	java:S106'"+Replace this use of System.out by a logger.(‹Î“8÷Ğë°¿1
+G	java:S106)"+Replace this use of System.out by a logger.(÷›8®Ú²¿1
+G	java:S106*"+Replace this use of System.out by a logger.(š»ûÔ8¯Ú²¿1
