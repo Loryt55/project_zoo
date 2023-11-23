@@ -1,6 +1,6 @@
-package Controller;
+package controller;
 
-import Animals.*;
+import animals.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,13 +8,13 @@ import java.util.List;
 public class Zoo {
     private List<Lion> lionsList;
     private List<Tiger> tigersList;
-    private List<Eagle> eagsleList;
+    private List<Eagle> eagleList;
 
 
     public Zoo() {
         this.lionsList = new ArrayList<>();
         this.tigersList = new ArrayList<>();
-        this.eagsleList = new ArrayList<>();
+        this.eagleList = new ArrayList<>();
     }
 
     public List<Lion> getLionsList() {
@@ -25,163 +25,168 @@ public class Zoo {
         return tigersList;
     }
 
-    public List<Eagle> getEagsleList() {
-        return eagsleList;
+    public List<Eagle> getEagleList() {
+        return eagleList;
     }
 
-    public void addLion (Lion newLion){
+    public void addLion(Lion newLion) {
         lionsList.add(newLion);
     }
-    public void addTiger (Tiger newTiger){
+
+    public void addTiger(Tiger newTiger) {
         tigersList.add(newTiger);
     }
-    public void addEagle (Eagle newEagle){
-        eagsleList.add(newEagle);
+
+    public void addEagle(Eagle newEagle) {
+        eagleList.add(newEagle);
     }
 
-    public Lion highestLion() {
-        Lion highest = new Lion();
-        if (lionsList.isEmpty()){
-            highest = new Lion();
-        }else {
-            highest = lionsList.getFirst();
-            for (Lion lion : lionsList) {
-                if (lion.getHeight() > highest.getHeight()) {
-                    highest = lion;
-                }
-            }
-        }
-        return highest;
-    }
-    public Lion lowestLion() {
-        Lion lowest = lionsList.getFirst();
+
+    public Lion findHighestLion() {
+        Lion currentHighest = lionsList.getFirst();
         for (Lion lion : lionsList) {
-            if (lion.getHeight() < lowest.getHeight()) {
-                lowest = lion;
+            if (lion.getHeight() > currentHighest.getHeight()) {
+                currentHighest = lion;
             }
         }
-        return lowest;
+        return currentHighest;
     }
 
-    public Tiger highestTiger() {
-        Tiger highest = tigersList.getFirst();
-        for (Tiger tiger : tigersList) {
-            if (tiger.getHeight() > highest.getHeight()) {
-                highest = tiger;
-            }
-        }
-        return highest;
-    }
-    public Tiger lowestTiger() {
-        Tiger lowest = tigersList.getFirst();
-        for (Tiger tiger : tigersList) {
-            if (tiger.getHeight() < lowest.getHeight()) {
-                lowest = tiger;
-            }
-        }
-        return lowest;
-    }
-
-    public Eagle highestEagle() {
-        Eagle highest = eagsleList.getFirst();
-        for (Eagle eagle : eagsleList) {
-            if (eagle.getHeight() > highest.getHeight()) {
-                highest = eagle;
-            }
-        }
-        return highest;
-    }
-    public Eagle lowestEagle() {
-        Eagle lowest = eagsleList.getFirst();
-        for (Eagle eagle : eagsleList) {
-            if (eagle.getHeight() < lowest.getHeight()) {
-                lowest = eagle;
-            }
-        }
-        return lowest;
-    }
-
-
-    public Lion heavierLion() {
-        Lion heavier = lionsList.getFirst();
+    public Lion findLowestLion() {
+        Lion currentLowest = lionsList.getFirst();
         for (Lion lion : lionsList) {
-            if (lion.getWeight() > heavier.getWeight()) {
-                heavier = lion;
+            if (lion.getHeight() < currentLowest.getHeight()) {
+                currentLowest = lion;
             }
         }
-        return heavier;
+        return currentLowest;
     }
-    public Lion lighterLion() {
-        Lion lighter = lionsList.getFirst();
+
+    public Tiger findHighestTiger() {
+        Tiger currentHighest = tigersList.getFirst();
+        for (Tiger tiger : tigersList) {
+            if (tiger.getHeight() > currentHighest.getHeight()) {
+                currentHighest = tiger;
+            }
+        }
+        return currentHighest;
+    }
+
+    public Tiger findLowestTiger() {
+        Tiger currentLowest = tigersList.getFirst();
+        for (Tiger tiger : tigersList) {
+            if (tiger.getHeight() < currentLowest.getHeight()) {
+                currentLowest = tiger;
+            }
+        }
+        return currentLowest;
+    }
+
+    public Eagle findHighestEagle() {
+        Eagle currentHighest = eagleList.getFirst();
+        for (Eagle eagle : eagleList) {
+            if (eagle.getHeight() > currentHighest.getHeight()) {
+                currentHighest = eagle;
+            }
+        }
+        return currentHighest;
+    }
+
+    public Eagle findLowestEagle() {
+        Eagle currentLowest = eagleList.getFirst();
+        for (Eagle eagle : eagleList) {
+            if (eagle.getHeight() < currentLowest.getHeight()) {
+                currentLowest = eagle;
+            }
+        }
+        return currentLowest;
+    }
+
+
+    public Lion findHeavierLion() {
+        Lion currentHeavier = lionsList.getFirst();
         for (Lion lion : lionsList) {
-            if (lion.getWeight() < lighter.getHeight()) {
-                lighter = lion;
+            if (lion.getWeight() > currentHeavier.getWeight()) {
+                currentHeavier = lion;
             }
         }
-        return lighter;
+        return currentHeavier;
     }
 
-    public Tiger heavierTiger() {
-        Tiger heavier = tigersList.getFirst();
+    public Lion findLightestLion() {
+        Lion currentLighter = lionsList.getFirst();
+        for (Lion lion : lionsList) {
+            if (lion.getWeight() < currentLighter.getHeight()) {
+                currentLighter = lion;
+            }
+        }
+        return currentLighter;
+    }
+
+    public Tiger findHeavierTiger() {
+        Tiger currentHeavier = tigersList.getFirst();
         for (Tiger tiger : tigersList) {
-            if (tiger.getWeight() > heavier.getWeight()) {
-                heavier = tiger;
+            if (tiger.getWeight() > currentHeavier.getWeight()) {
+                currentHeavier = tiger;
             }
         }
-        return heavier;
+        return currentHeavier;
     }
-    public Tiger lighterTiger() {
-        Tiger lighter = tigersList.getFirst();
+
+    public Tiger findLightestTiger() {
+        Tiger currentLighter = tigersList.getFirst();
         for (Tiger tiger : tigersList) {
-            if (tiger.getWeight() < lighter.getWeight()) {
-                lighter = tiger;
+            if (tiger.getWeight() < currentLighter.getWeight()) {
+                currentLighter = tiger;
             }
         }
-        return lighter;
+        return currentLighter;
     }
 
-    public Eagle heavierEagle() {
-        Eagle heavier = eagsleList.getFirst();
-        for (Eagle eagle : eagsleList) {
-            if (eagle.getWeight() > heavier.getWeight()) {
-                heavier = eagle;
+    public Eagle findHeavierEagle() {
+        Eagle currentHeavier = eagleList.getFirst();
+        for (Eagle eagle : eagleList) {
+            if (eagle.getWeight() > currentHeavier.getWeight()) {
+                currentHeavier = eagle;
             }
         }
-        return heavier;
+        return currentHeavier;
     }
-    public Eagle lighterEagle() {
-        Eagle lighter = eagsleList.getFirst();
-        for (Eagle eagle : eagsleList) {
-            if (eagle.getWeight() < lighter.getWeight()) {
-                lighter = eagle;
+
+    public Eagle findLightestEagle() {
+        Eagle currentLighter = eagleList.getFirst();
+        for (Eagle eagle : eagleList) {
+            if (eagle.getWeight() < currentLighter.getWeight()) {
+                currentLighter = eagle;
             }
         }
-        return lighter;
+        return currentLighter;
     }
 
 
-    public Felin longTail (){
-        ArrayList<Felin> felinsList = new ArrayList<>();
+    public TailedAnimal findLongestTail() {
+        ArrayList<TailedAnimal> felinsList = new ArrayList<>();
         felinsList.addAll(lionsList);
         felinsList.addAll(tigersList);
-        Felin longTailFelin = felinsList.getFirst();
-        for (Felin felin : felinsList) {
-            if (felin.getTailLength() > longTailFelin.getTailLength()) {
-                longTailFelin = felin;
+        TailedAnimal currentLongestTail = felinsList.getFirst();
+        for (TailedAnimal animalsTails : felinsList) {
+            if (animalsTails.getTailLength() > currentLongestTail.getTailLength()) {
+                currentLongestTail = animalsTails;
             }
         }
-        return longTailFelin;
+        return currentLongestTail;
     }
-    public Bird wingspan(){
-        ArrayList<Bird> birdsList = new ArrayList<>();
-        birdsList.addAll(eagsleList);
-        Bird wingspanBird = birdsList.getFirst();
-        for (Bird bird : birdsList) {
-            if (bird.getWingspan() > wingspanBird.getWingspan()) {
-                wingspanBird = bird;
+
+    public WingedAnimal findLargerWingspan() {
+        ArrayList<WingedAnimal> birdsList = new ArrayList<>();
+        birdsList.addAll(eagleList);
+        WingedAnimal currentLargerWingspan = birdsList.getFirst();
+        for (WingedAnimal animalsWings : birdsList) {
+            if (animalsWings.getWingspan() > currentLargerWingspan.getWingspan()) {
+                currentLargerWingspan = animalsWings;
             }
         }
-        return wingspanBird;
+        return currentLargerWingspan;
     }
 
 

@@ -1,7 +1,7 @@
-package Animals;
+package animals;
 import java.time.LocalDate;
 
-public class Lion extends Felin {
+public class Lion extends TailedAnimal {
     public Lion() {
     }
 
