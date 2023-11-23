@@ -3,15 +3,13 @@ package animals;
 import java.time.LocalDate;
 
 public abstract class Animal {
-    private String name = "Unknown";
-    private String favoriteFood = "Unknown";
-    private int age = 0;
-    private LocalDate registrationDate = LocalDate.of(1900, 01, 01);
-    private double weight = 0.0;
-    private double height = 0.0;
-    public Animal() {
-    }
-    public Animal(String name, String favoriteFood, int age, LocalDate registrationDate, double weight, double height) {
+    private String name;
+    private String favoriteFood;
+    private int age;
+    private LocalDate registrationDate;
+    private double weight;
+    private double height;
+    protected Animal(String name, String favoriteFood, int age, LocalDate registrationDate, double weight, double height) {
         this.name = name;
         this.favoriteFood = favoriteFood;
         this.age = age;

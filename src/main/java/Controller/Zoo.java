@@ -42,6 +42,9 @@ public class Zoo {
     }
 
 
+
+
+
     public Lion findHighestLion() {
         Lion currentHighest = lionsList.getFirst();
         for (Lion lion : lionsList) {

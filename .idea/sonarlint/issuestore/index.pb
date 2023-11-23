@@ -35,3 +35,5 @@ O
 src/main/java/animals/Bird.java,9\d\9de559c534a9ef1996f1d2dad69f6c43e510b94a
 W
 'src/main/java/animals/WingedAnimal.java,a\3\a30832be7e1eb6d18ad6926d9fc2c22cbc137748
+L
+src/main/java/view/Main.java,3\6\3607f69ac32282634241e9a380d7cfe432f50346
