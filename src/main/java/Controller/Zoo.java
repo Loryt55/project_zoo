@@ -1,13 +1,14 @@
 package controller;
 
-import animals.*;
+import model.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Zoo {
-
-    private  List<Animal> animalsList;
+    private static final String ERRORMSG1 = "Specie: ";
+    private static final String ERRORMSG2 = ", non trovata";
+    private List<Animal> animalsList;
     private List<Lion> lionsList;
     private List<Tiger> tigersList;
     private List<Eagle> eagleList;
@@ -52,48 +53,122 @@ public class Zoo {
         eagleList.add(newEagle);
     }
 
-
-    public Animal findHighestAnimalForSpecies(String animalSpecies) {
+    // Prova 2
+    public Animal findHighestAnimalForSpecies(Class<? extends Animal> animalClass) {
         Animal currentHighest = null;
 
         for (Animal animal : animalsList) {
-            if (animal.getSpecies().equals(animalSpecies)) {
-                if (currentHighest == null || animal.getHeight() > currentHighest.getHeight()) {
-                    currentHighest = animal;
-                }
+            if (animalClass.isInstance(animal) && (currentHighest == null || animal.getHeight() > currentHighest.getHeight())) {
+                currentHighest = animal;
             }
-        }if (currentHighest == null){
-            throw new IllegalArgumentException("Specie: " + animalSpecies + ", non trovata: " + animalSpecies);
+        }
+        return currentHighest;
+    }
+    public Animal findLowesAnimalForSpecies(Class<? extends Animal> animalClass) {
+        Animal currentHighest = null;
+
+        for (Animal animal : animalsList) {
+            if (animalClass.isInstance(animal) && (currentHighest == null || animal.getHeight() < currentHighest.getHeight())) {
+                currentHighest = animal;
+            }
         }
         return currentHighest;
     }
 
-    public Animal findLowesAnimalForSpecies(String animalSpecies) {
+
+
+    public Animal findHeavierAnimalForSpecies(Class<? extends Animal> animalClass) {
+        Animal currentHeavier = null;
+
+        for (Animal animal : animalsList) {
+            if (animalClass.isInstance(animal) && (currentHeavier == null || animal.getWeight() > currentHeavier.getWeight())) {
+                currentHeavier = animal;
+            }
+        }
+        return currentHeavier;
+    }
+    public Animal findLightestAnimalForSpecies(Class<? extends Animal> animalClass) {
+        Animal currentLighter = null;
+
+        for (Animal animal : animalsList) {
+            if (animalClass.isInstance(animal) && (currentLighter == null || animal.getWeight() < currentLighter.getWeight())) {
+                currentLighter = animal;
+            }
+        }
+        return currentLighter;
+    }
+
+
+
+
+
+
+
+    // Prova 1
+    public Animal findHighestAnimalForSpeciesByString(String animalSpecies) {
         Animal currentHighest = null;
 
         for (Animal animal : animalsList) {
-            if (animal.getSpecies().equals(animalSpecies)) {
-                if (currentHighest == null || animal.getHeight() < currentHighest.getHeight()) {
-                    currentHighest = animal;
-                }
+            if (animal.getSpecies().equals(animalSpecies) && (currentHighest == null || animal.getHeight() > currentHighest.getHeight())) {
+                currentHighest = animal;
             }
-        }if (currentHighest == null){
-            throw new IllegalArgumentException("Specie: " + animalSpecies + ", non trovata: " + animalSpecies);
+        }
+        if (currentHighest == null) {
+            throw new IllegalArgumentException(ERRORMSG1 + animalSpecies + ERRORMSG2);
         }
         return currentHighest;
     }
 
-    //Presenza di cast
+    public Animal findLowesAnimalForSpeciesByString(String animalSpecies) {
+        Animal currentHighest = null;
+
+        for (Animal animal : animalsList) {
+            if (animal.getSpecies().equals(animalSpecies) && (currentHighest == null || animal.getHeight() < currentHighest.getHeight())) {
+                currentHighest = animal;
+            }
+        }
+        if (currentHighest == null) {
+            throw new IllegalArgumentException(ERRORMSG1 + animalSpecies + ERRORMSG2);
+        }
+        return currentHighest;
+    }
+
+
+
+    public Animal findHeavierAnimalForSpeciesByString(String animalSpecies) {
+        Animal currentHeavier = null;
+
+        for (Animal animal : animalsList) {
+            if (animal.getSpecies().equals(animalSpecies) && (currentHeavier == null || animal.getWeight() > currentHeavier.getWeight())) {
+                currentHeavier = animal;
+            }
+        }
+        if (currentHeavier == null) {
+            throw new IllegalArgumentException(ERRORMSG1 + animalSpecies + ERRORMSG2);
+        }
+        return currentHeavier;
+    }
+
+    public Animal findLightestAnimalForSpeciesByString(String animalSpecies) {
+        Animal currentLighter = null;
+
+        for (Animal animal : animalsList) {
+            if (animal.getSpecies().equals(animalSpecies) && (currentLighter == null || animal.getWeight() < currentLighter.getWeight())) {
+                currentLighter = animal;
+            }
+        }
+        if (currentLighter == null) {
+            throw new IllegalArgumentException(ERRORMSG1 + animalSpecies + ERRORMSG2);
+        }
+        return currentLighter;
+    }
+
     public Animal findLongestAnimalTail() {
-        ArrayList<Animal> tailedAnimalsList = new ArrayList<>();
-        for (Animal animal: animalsList) {
-            if (animal instanceof TailedAnimal){
-                tailedAnimalsList.add(animal);
-            }
-        }
         ArrayList<TailedAnimal> tailedList = new ArrayList<>();
-        for (Animal tailedAnimal : tailedAnimalsList) {
-            tailedList.add((TailedAnimal) tailedAnimal);
+        for (Animal animal : animalsList) {
+            if (animal instanceof TailedAnimal tailedAnimal) {
+                tailedList.add(tailedAnimal);
+            }
         }
         TailedAnimal currentLongestTail = tailedList.getFirst();
         for (TailedAnimal animalsTails : tailedList) {
@@ -105,15 +180,11 @@ public class Zoo {
     }
 
     public Animal findLargerAnimalWingspan() {
-        ArrayList<Animal> WingspanAnimalsList = new ArrayList<>();
-        for (Animal animal: animalsList) {
-            if (animal instanceof WingedAnimal){
-                WingspanAnimalsList.add(animal);
-            }
-        }
         ArrayList<WingedAnimal> wingedList = new ArrayList<>();
-        for (Animal wingedAnimal : WingspanAnimalsList) {
-            wingedList.add((WingedAnimal) wingedAnimal);
+        for (Animal animal : animalsList) {
+            if (animal instanceof WingedAnimal wingedAnimal) {
+                wingedList.add(wingedAnimal);
+            }
         }
         WingedAnimal currentLargerWingspan = wingedList.getFirst();
         for (WingedAnimal wingedAnimal : wingedList) {

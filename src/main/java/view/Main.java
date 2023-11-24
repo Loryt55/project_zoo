@@ -1,8 +1,8 @@
 package view;
 
-import animals.Eagle;
-import animals.Lion;
-import animals.Tiger;
+import model.Eagle;
+import model.Lion;
+import model.Tiger;
 import controller.Zoo;
 
 import java.time.LocalDate;
@@ -47,15 +47,21 @@ public class Main {
         zoo.addAnimal(eagle2);
         zoo.addAnimal(eagle3);
 
+        System.out.println("l'animale più alto della specie: " + " è: " + zoo.findHighestAnimalForSpecies(Tiger.class).getName());
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Inserire specie");
         String animalSearched = scanner.nextLine();
 
-        System.out.println("l'animale più alto della specie: " + animalSearched + " è: " + zoo.findHighestAnimalForSpecies(animalSearched).getName());
-        System.out.println("l'animale più basso della specie: " + animalSearched + " è: " + zoo.findLowesAnimalForSpecies(animalSearched).getName());
+        System.out.println("l'animale più alto della specie: " + animalSearched + " è: " + zoo.findHighestAnimalForSpeciesByString(animalSearched).getName());
+        System.out.println("l'animale più basso della specie: " + animalSearched + " è: " + zoo.findLowesAnimalForSpeciesByString(animalSearched).getName());
+
+        System.out.println("l'animale più pesante della specie: " + animalSearched + " è: " + zoo.findHeavierAnimalForSpeciesByString(animalSearched).getName());
+        System.out.println("l'animale più leggero della specie: " + animalSearched + " è: " + zoo.findLightestAnimalForSpeciesByString(animalSearched).getName());
 
         System.out.println("l'animale con la coda più lunga è: " + zoo.findLongestAnimalTail().getName());
         System.out.println("l'animale con l'apertura alare più ampia è: " + zoo.findLargerAnimalWingspan().getName());
+
 
     }
 }
