@@ -1,9 +1,6 @@
 
-G	java:S1062"+Replace this use of System.out by a logger.(ş’Ùá8Èùó„À1
-L	java:S1065"+Replace this use of System.out by a logger.(¥æÿ¶ıÿÿÿÿ8Êùó„À1
-G	java:S1068"+Replace this use of System.out by a logger.(À±ÊÒ8Ëùó„À1
-L	java:S1069"+Replace this use of System.out by a logger.(®ÂßÎüÿÿÿÿ8Ëùó„À1
-L	java:S106;"+Replace this use of System.out by a logger.(Ä‹ çÿÿÿÿÿ8Ëùó„À1
-L	java:S106<"+Replace this use of System.out by a logger.(Ÿƒõšøÿÿÿÿ8Ìùó„À1
-G	java:S106>"+Replace this use of System.out by a logger.(¥Ô‰È8Ìùó„À1
-L	java:S106?"+Replace this use of System.out by a logger.(ıü¬ğÿÿÿÿÿ8Ìùó„À1
+G	java:S106&"+Replace this use of System.out by a logger.(Ÿƒ¤8¯ÓˆÀ1
+G	java:S106("+Replace this use of System.out by a logger.(¥Ô‰È8±ÓˆÀ1
+L	java:S106)"+Replace this use of System.out by a logger.(ıü¬ğÿÿÿÿÿ8²ÓˆÀ1
+P
+java:S1128	".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8é»ÎÀ1

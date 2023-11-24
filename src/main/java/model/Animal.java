@@ -3,25 +3,20 @@ package model;
 import java.time.LocalDate;
 
 public abstract class Animal {
-    private final String species;
     private String name;
     private String favoriteFood;
     private int age;
     private LocalDate registrationDate;
     private double weight;
     private double height;
+
     protected Animal(String name, String favoriteFood, int age, LocalDate registrationDate, double weight, double height) {
-        this.species = null;
         this.name = name;
         this.favoriteFood = favoriteFood;
         this.age = age;
         this.registrationDate = registrationDate;
         this.weight = weight;
         this.height = height;
-    }
-
-    public String getSpecies() {
-        return species;
     }
 
     public String getName() {
