@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Zoo {
-    private static final String ERRORMSG1 = "Specie: ";
-    private static final String ERRORMSG2 = ", non trovata";
     private List<Animal> animalsList;
 
 
@@ -28,7 +26,7 @@ public class Zoo {
         Animal currentHighest = null;
 
         for (Animal animal : animalsList) {
-            if (currentHighest == null || animal.getHeight() > currentHighest.getHeight()) {
+            if (animalClass.isInstance(animal) && (currentHighest == null || animal.getHeight() > currentHighest.getHeight())) {
                 currentHighest = animal;
             }
         }
@@ -39,7 +37,7 @@ public class Zoo {
         Animal currentHighest = null;
 
         for (Animal animal : animalsList) {
-            if (currentHighest == null || animal.getHeight() < currentHighest.getHeight()) {
+            if (animalClass.isInstance(animal) && (currentHighest == null || animal.getHeight() < currentHighest.getHeight())) {
                 currentHighest = animal;
             }
         }
@@ -50,7 +48,7 @@ public class Zoo {
         Animal currentHeavier = null;
 
         for (Animal animal : animalsList) {
-            if (currentHeavier == null || animal.getWeight() > currentHeavier.getWeight()) {
+            if (animalClass.isInstance(animal) && (currentHeavier == null || animal.getWeight() > currentHeavier.getWeight())) {
                 currentHeavier = animal;
             }
         }
@@ -61,7 +59,7 @@ public class Zoo {
         Animal currentLighter = null;
 
         for (Animal animal : animalsList) {
-            if (currentLighter == null || animal.getWeight() < currentLighter.getWeight()) {
+            if (animalClass.isInstance(animal) && (currentLighter == null || animal.getWeight() < currentLighter.getWeight())) {
                 currentLighter = animal;
             }
         }

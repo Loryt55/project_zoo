@@ -1,6 +1,23 @@
 
-G	java:S106&"+Replace this use of System.out by a logger.(Ÿƒ¤8¯ÓˆÀ1
-G	java:S106("+Replace this use of System.out by a logger.(¥Ô‰È8±ÓˆÀ1
-L	java:S106)"+Replace this use of System.out by a logger.(ıü¬ğÿÿÿÿÿ8²ÓˆÀ1
-P
-java:S1128	".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8é»ÎÀ1
+
+java:S1192)"dDefine a constant instead of duplicating this literal "l'animale piÃ¹ basso della specie: " 3 times.(¾Şæ“8ÊÓûÀ1
+ƒ
+java:S1192-"fDefine a constant instead of duplicating this literal "l'animale piÃ¹ pesante della specie: " 3 times.(„ëî’8Ü…üÀ1
+€
+java:S1192%"cDefine a constant instead of duplicating this literal "l'animale piÃ¹ alto della specie: " 3 times.(µ¬àÿ8Ö–õÀ1
+ƒ
+java:S11921"fDefine a constant instead of duplicating this literal "l'animale piÃ¹ leggero della specie: " 3 times.(ñ‚æ’8¯ üÀ1
+G	java:S106%"+Replace this use of System.out by a logger.(µ¬àÿ8ã–õÀ1
+G	java:S106&"+Replace this use of System.out by a logger.(Ÿƒ¤8ã–õÀ1
+L	java:S106'"+Replace this use of System.out by a logger.(±ÇÀ¥øÿÿÿÿ8ä–õÀ1
+G	java:S106)"+Replace this use of System.out by a logger.(¾Şæ“8ä–õÀ1
+G	java:S106*"+Replace this use of System.out by a logger.(úŞ–È8ä–õÀ1
+L	java:S106+"+Replace this use of System.out by a logger.(Š†‡Îıÿÿÿÿ8ä–õÀ1
+G	java:S106-"+Replace this use of System.out by a logger.(„ëî’8ä–õÀ1
+G	java:S106."+Replace this use of System.out by a logger.(‡Ü¶è8å–õÀ1
+G	java:S106/"+Replace this use of System.out by a logger.(¿ÏÄ‡8å–õÀ1
+G	java:S1061"+Replace this use of System.out by a logger.(ñ‚æ’8å–õÀ1
+G	java:S1062"+Replace this use of System.out by a logger.(Šñÿ8æ–õÀ1
+G	java:S1063"+Replace this use of System.out by a logger.(Ö’ÚÔ8ÃãõÀ1
+G	java:S1065"+Replace this use of System.out by a logger.(¥Ô‰È8ÃãõÀ1
+L	java:S1066"+Replace this use of System.out by a logger.(ıü¬ğÿÿÿÿÿ8ÃãõÀ1

@@ -1,4 +1,4 @@
-package classeTest;
+package classe_test;
 
 // Classe di test
 public class Alpha {

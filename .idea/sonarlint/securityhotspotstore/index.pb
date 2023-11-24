@@ -41,3 +41,5 @@ U
 %src/main/java/model/WingedAnimal.java,3\4\34b932667ceccab7f21c99e93e9068f692d32465
 O
 src/main/java/model/Animal.java,d\2\d27a4218f7849b3930a4976bb1b1b893a015832e
+T
+$src/main/java/classe_test/Alpha.java,c\8\c8bba5efb5cbf2caa959cb3f38def020dfd9d48e

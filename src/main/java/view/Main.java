@@ -6,7 +6,6 @@ import model.Tiger;
 import controller.Zoo;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,7 +34,21 @@ public class Main {
         zoo.addAnimal(eagle2);
         zoo.addAnimal(eagle3);
 
+        System.out.println("l'animale più alto della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Lion.class).getName());
         System.out.println("l'animale più alto della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Tiger.class).getName());
+        System.out.println("l'animale più alto della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Eagle.class).getName());
+
+        System.out.println("l'animale più basso della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Lion.class).getName());
+        System.out.println("l'animale più basso della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Tiger.class).getName());
+        System.out.println("l'animale più basso della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Eagle.class).getName());
+
+        System.out.println("l'animale più pesante della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Lion.class).getName());
+        System.out.println("l'animale più pesante della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Tiger.class).getName());
+        System.out.println("l'animale più pesante della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Eagle.class).getName());
+
+        System.out.println("l'animale più leggero della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Lion.class).getName());
+        System.out.println("l'animale più leggero della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Tiger.class).getName());
+        System.out.println("l'animale più leggero della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Eagle.class).getName());
 
         System.out.println("l'animale con la coda più lunga è: " + zoo.findLongestAnimalTail().getName());
         System.out.println("l'animale con l'apertura alare più ampia è: " + zoo.findLargerAnimalWingspan().getName());
