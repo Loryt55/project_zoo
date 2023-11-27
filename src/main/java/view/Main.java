@@ -34,21 +34,27 @@ public class Main {
         zoo.addAnimal(eagle2);
         zoo.addAnimal(eagle3);
 
-        System.out.println("l'animale più alto della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Lion.class).getName());
-        System.out.println("l'animale più alto della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Tiger.class).getName());
-        System.out.println("l'animale più alto della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Eagle.class).getName());
+        String msgAlto = "l'animale più alto della specie: ";
+        String msgBasso = "l'animale più basso della specie: ";
+        String msgPesante = "l'animale più pesante della specie: ";
+        String msgLeggero = "l'animale più leggero della specie: ";
 
-        System.out.println("l'animale più basso della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Lion.class).getName());
-        System.out.println("l'animale più basso della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Tiger.class).getName());
-        System.out.println("l'animale più basso della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Eagle.class).getName());
 
-        System.out.println("l'animale più pesante della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Lion.class).getName());
-        System.out.println("l'animale più pesante della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Tiger.class).getName());
-        System.out.println("l'animale più pesante della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Eagle.class).getName());
+        System.out.println(msgAlto + Lion.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Lion.class).getName());
+        System.out.println(msgAlto + Tiger.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Tiger.class).getName());
+        System.out.println(msgAlto + Eagle.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Eagle.class).getName());
 
-        System.out.println("l'animale più leggero della specie: " + Lion.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Lion.class).getName());
-        System.out.println("l'animale più leggero della specie: " + Tiger.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Tiger.class).getName());
-        System.out.println("l'animale più leggero della specie: " + Eagle.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Eagle.class).getName());
+        System.out.println(msgBasso + Lion.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Lion.class).getName());
+        System.out.println(msgBasso + Tiger.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Tiger.class).getName());
+        System.out.println(msgBasso + Eagle.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Eagle.class).getName());
+
+        System.out.println(msgPesante + Lion.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Lion.class).getName());
+        System.out.println(msgPesante + Tiger.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Tiger.class).getName());
+        System.out.println(msgPesante + Eagle.class.getSimpleName() + " è: " + zoo.findHeavierAnimalForSpecies(Eagle.class).getName());
+
+        System.out.println(msgLeggero + Lion.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Lion.class).getName());
+        System.out.println(msgLeggero + Tiger.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Tiger.class).getName());
+        System.out.println(msgLeggero + Eagle.class.getSimpleName() + " è: " + zoo.findLightestAnimalForSpecies(Eagle.class).getName());
 
         System.out.println("l'animale con la coda più lunga è: " + zoo.findLongestAnimalTail().getName());
         System.out.println("l'animale con l'apertura alare più ampia è: " + zoo.findLargerAnimalWingspan().getName());

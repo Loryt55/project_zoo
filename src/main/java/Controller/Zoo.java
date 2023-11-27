@@ -26,7 +26,7 @@ public class Zoo {
         Animal currentHighest = null;
 
         for (Animal animal : animalsList) {
-            if (animalClass.isInstance(animal) && (currentHighest == null || animal.getHeight() > currentHighest.getHeight())) {
+            if (animalClass.isInstance(animal) && (currentHighest == null || (animal.getHeight() > currentHighest.getHeight()))) {
                 currentHighest = animal;
             }
         }
@@ -37,7 +37,7 @@ public class Zoo {
         Animal currentHighest = null;
 
         for (Animal animal : animalsList) {
-            if (animalClass.isInstance(animal) && (currentHighest == null || animal.getHeight() < currentHighest.getHeight())) {
+            if (animalClass.isInstance(animal) && (currentHighest == null || (animal.getHeight() < currentHighest.getHeight()))) {
                 currentHighest = animal;
             }
         }
@@ -48,7 +48,7 @@ public class Zoo {
         Animal currentHeavier = null;
 
         for (Animal animal : animalsList) {
-            if (animalClass.isInstance(animal) && (currentHeavier == null || animal.getWeight() > currentHeavier.getWeight())) {
+            if (animalClass.isInstance(animal) && (currentHeavier == null || (animal.getWeight() > currentHeavier.getWeight()))) {
                 currentHeavier = animal;
             }
         }
@@ -59,7 +59,7 @@ public class Zoo {
         Animal currentLighter = null;
 
         for (Animal animal : animalsList) {
-            if (animalClass.isInstance(animal) && (currentLighter == null || animal.getWeight() < currentLighter.getWeight())) {
+            if (animalClass.isInstance(animal) && (currentLighter == null || (animal.getWeight() < currentLighter.getWeight()))) {
                 currentLighter = animal;
             }
         }
