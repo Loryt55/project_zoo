@@ -29,8 +29,6 @@ public class Main {
         String msgPesante = "l'animale più pesante della specie: ";
         String msgLeggero = "l'animale più leggero della specie: ";
 
-        long startTime1 = System.currentTimeMillis();
-
         zoo.addAnimal(lion1);
         zoo.addAnimal(lion2);
         zoo.addAnimal(lion3);
@@ -44,8 +42,6 @@ public class Main {
         System.out.println("\n" +msgAlto + Lion.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Lion.class).getName());
         System.out.println(msgAlto + Tiger.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Tiger.class).getName());
         System.out.println(msgAlto + Eagle.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpecies(Eagle.class).getName() + "\n");
-
-        long endTime1 = System.currentTimeMillis();
 
         System.out.println(msgBasso + Lion.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Lion.class).getName());
         System.out.println(msgBasso + Tiger.class.getSimpleName() + " è: " + zoo.findLowesAnimalForSpecies(Tiger.class).getName());
@@ -61,33 +57,6 @@ public class Main {
 
         System.out.println("l'animale con la coda più lunga è: " + zoo.findLongestAnimalTail().getName());
         System.out.println("l'animale con l'apertura alare più ampia è: " + zoo.findLargerAnimalWingspan().getName());
-
-        long startTime2 = System.currentTimeMillis();
-
-        zoo.putAnimal(lion1);
-        zoo.putAnimal(lion2);
-        zoo.putAnimal(lion3);
-        zoo.putAnimal(tiger1);
-        zoo.putAnimal(tiger2);
-        zoo.putAnimal(tiger3);
-        zoo.putAnimal(eagle1);
-        zoo.putAnimal(eagle2);
-        zoo.putAnimal(eagle3);
-
-        System.out.println("\n" + msgAlto + Lion.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpeciesHashMap(Lion.class).getName());
-        System.out.println(msgAlto + Tiger.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpeciesHashMap(Tiger.class).getName());
-        System.out.println(msgAlto + Eagle.class.getSimpleName() + " è: " + zoo.findHighestAnimalForSpeciesHashMap(Eagle.class).getName());
-
-        long endTime2 = System.currentTimeMillis();
-
-        System.out.println("\n" + zoo.getAnimalHashMap());
-        System.out.println(zoo.getAnimalHashMap().get(Tiger.class) + "\n");
-
-        System.out.println("\nTempo di esecuzione ArrayList: " + (endTime1 - startTime1) + " millisecondi");
-        System.out.println("Tempo di esecuzione HashMap: " + (endTime2 - startTime2) + " millisecondi");
-
-        System.out.println("\nArrayList: " + zoo.getContatoreArrayList());
-        System.out.println("HashMap: " + zoo.getContatoreHashMap());
 
 
 
