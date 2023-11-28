@@ -5,7 +5,7 @@ import model.*;
 import java.util.*;
 
 public class Zoo {
-    private List<Animal> animalsList;
+    private final List<Animal> animalsList;
 
     public Zoo() {
         this.animalsList = new ArrayList<>();
