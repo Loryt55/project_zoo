@@ -18,6 +18,10 @@ public class Zoo {
         animalsList.add(newAnimal);
     }
 
+    public Animal findHighestAnimalForSpeciesStream(Class<? extends Animal> animalClass) {
+        return null;
+    }
+
     public Animal findHighestAnimalForSpecies(Class<? extends Animal> animalClass) {
         Animal currentHighest = null;
 
