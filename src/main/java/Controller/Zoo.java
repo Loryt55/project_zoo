@@ -14,54 +14,54 @@ public class Zoo {
     public List<Animal> getAnimalList() {
         return this.animalsList;
     }
+
     public void addAnimal(Animal newAnimal) {
         animalsList.add(newAnimal);
     }
 
-    public Animal findHighestAnimalForSpecies(Class<? extends Animal> animalClass) {
-        Animal currentHighest = null;
+    public <T extends Animal> T findHighestAnimalForSpecies(Class<T> animalClass) {
+        T currentHighest = null;
 
         for (Animal animal : animalsList) {
             if (animalClass.isInstance(animal) && (currentHighest == null || (animal.getHeight() > currentHighest.getHeight()))) {
-                currentHighest = animal;
+                currentHighest = animalClass.cast(animal);
             }
         }
         return currentHighest;
     }
 
-    public Animal findLowesAnimalForSpecies(Class<? extends Animal> animalClass) {
-        Animal currentHighest = null;
+    public <T extends Animal> T findLowestAnimalForSpecies(Class<T> animalClass) {
+        T currentHighest = null;
 
         for (Animal animal : animalsList) {
             if (animalClass.isInstance(animal) && (currentHighest == null || (animal.getHeight() < currentHighest.getHeight()))) {
-                currentHighest = animal;
+                currentHighest = animalClass.cast(animal);
             }
         }
         return currentHighest;
     }
 
-    public Animal findHeavierAnimalForSpecies(Class<? extends Animal> animalClass) {
-        Animal currentHeavier = null;
+    public <T extends Animal> T findHeavierAnimalForSpecies(Class<T> animalClass) {
+        T currentHeavier = null;
 
         for (Animal animal : animalsList) {
             if (animalClass.isInstance(animal) && (currentHeavier == null || (animal.getWeight() > currentHeavier.getWeight()))) {
-                currentHeavier = animal;
+                currentHeavier = animalClass.cast(animal);
             }
         }
         return currentHeavier;
     }
 
-    public Animal findLightestAnimalForSpecies(Class<? extends Animal> animalClass) {
-        Animal currentLighter = null;
+    public <T extends Animal> T findLightestAnimalForSpecies(Class<T> animalClass) {
+        T currentLighter = null;
 
         for (Animal animal : animalsList) {
             if (animalClass.isInstance(animal) && (currentLighter == null || (animal.getWeight() < currentLighter.getWeight()))) {
-                currentLighter = animal;
+                currentLighter = animalClass.cast(animal);
             }
         }
         return currentLighter;
     }
-
 
     public TailedAnimal findLongestAnimalTail() {
         ArrayList<TailedAnimal> tailedList = new ArrayList<>();
