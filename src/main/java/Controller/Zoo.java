@@ -18,25 +18,25 @@ public class Zoo {
         animalsList.add(newAnimal);
     }
 
-    public Animal findHighestAnimalForSpecies(Class<? extends Animal> animalClass) {
-        return animalsList.stream()
+    public <T extends Animal> T findHighestAnimalForSpecies(Class<T> animalClass) {
+        return animalClass.cast(animalsList.stream()
                 .filter(animalClass::isInstance)
                 .max(Comparator.comparingDouble(Animal::getHeight))
-                .orElse(null);
+                .orElse(null));
     }
 
-    public Animal findLowesAnimalForSpecies(Class<? extends Animal> animalClass) {
-        return animalsList.stream()
+    public <T extends Animal> T findLowestAnimalForSpecies(Class<T> animalClass) {
+        return animalClass.cast(animalsList.stream()
                 .filter(animalClass::isInstance)
                 .min(Comparator.comparingDouble(Animal::getHeight))
-                .orElse(null);
+                .orElse(null));
     }
 
-    public Animal findHeavierAnimalForSpecies(Class<? extends Animal> animalClass) {
-        return animalsList.stream()
+    public <T extends Animal> T findHeavierAnimalForSpecies(Class<T> animalClass) {
+        return animalClass.cast(animalsList.stream()
                 .filter(animalClass::isInstance)
                 .max(Comparator.comparingDouble(Animal::getWeight))
-                .orElse(null);
+                .orElse(null));
     }
 
     public <T extends Animal> T findLightestAnimalForSpecies(Class<T> animalClass) {
