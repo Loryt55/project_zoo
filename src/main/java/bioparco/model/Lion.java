@@ -1,4 +1,6 @@
-package model;
+package bioparco.model;
+
+import bioparco.model.abstracts.TailedAnimal;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package model;
+package bioparco.model.abstracts;
 
 import java.time.LocalDate;
 

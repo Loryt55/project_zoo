@@ -1,9 +1,9 @@
-package view;
+package bioparco;
 
-import model.Eagle;
-import model.Lion;
-import model.Tiger;
-import controller.Zoo;
+import bioparco.model.Eagle;
+import bioparco.model.Lion;
+import bioparco.model.Tiger;
+import bioparco.controller.Zoo;
 
 import java.time.LocalDate;
 
@@ -29,15 +29,15 @@ public class Main {
         String msgPesante = "l'animale più pesante della specie: ";
         String msgLeggero = "l'animale più leggero della specie: ";
 
-        zoo.addAnimal(lion1);
-        zoo.addAnimal(lion2);
-        zoo.addAnimal(lion3);
-        zoo.addAnimal(tiger1);
-        zoo.addAnimal(tiger2);
-        zoo.addAnimal(tiger3);
-        zoo.addAnimal(eagle1);
-        zoo.addAnimal(eagle2);
-        zoo.addAnimal(eagle3);
+        zoo.putAnimal(lion1);
+        zoo.putAnimal(lion2);
+        zoo.putAnimal(lion3);
+        zoo.putAnimal(tiger1);
+        zoo.putAnimal(tiger2);
+        zoo.putAnimal(tiger3);
+        zoo.putAnimal(eagle1);
+        zoo.putAnimal(eagle2);
+        zoo.putAnimal(eagle3);
 
         Lion highestLion = zoo.findHighestAnimalForSpecies(Lion.class);
         Tiger highestTiger = zoo.findHighestAnimalForSpecies(Tiger.class);
