@@ -6,7 +6,6 @@ import bioparco.model.Tiger;
 import bioparco.controller.Zoo;
 
 import java.time.LocalDate;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
@@ -71,6 +70,5 @@ public class Main {
 
         logger.info("L'animale con la coda più lunga è: " + zoo.findLongestAnimalTail().getName());
         logger.info("L'animale con l'apertura alare più ampia è: " + zoo.findLargerAnimalWingspan().getName());
-        logger.log(Level.INFO, "sdf");
     }
 }
