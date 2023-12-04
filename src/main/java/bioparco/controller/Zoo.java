@@ -5,6 +5,7 @@ import bioparco.model.abstracts.TailedAnimal;
 import bioparco.model.abstracts.WingedAnimal;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Zoo {
 
@@ -30,47 +31,74 @@ public class Zoo {
     }
 
     public <T extends Animal> T findHighestAnimalForSpecies(Class<T> animalClass) {
-        return animalClass.cast(animalHashMap.get(animalClass).stream()
+        if(!animalHashMap.containsKey(animalClass)){
+            return null;
+        }
+        return animalClass.cast(animalHashMap.get(animalClass)
+                .stream()
                 .max(Comparator.comparingDouble(Animal::getHeight))
                 .orElse(null));
     }
 
     public <T extends Animal> T findLowestAnimalForSpecies(Class<T> animalClass) {
-        return animalClass.cast(animalHashMap.get(animalClass).stream()
+        if(!animalHashMap.containsKey(animalClass)){
+            return null;
+        }
+        return animalClass.cast(animalHashMap.get(animalClass)
+                .stream()
                 .min(Comparator.comparingDouble(Animal::getHeight))
                 .orElse(null));
     }
 
     public <T extends Animal> T findHeavierAnimalForSpecies(Class<T> animalClass) {
-        return animalClass.cast(animalHashMap.get(animalClass).stream()
+        if(!animalHashMap.containsKey(animalClass)){
+            return null;
+        }
+        return animalClass.cast(animalHashMap.get(animalClass)
+                .stream()
                 .max(Comparator.comparingDouble(Animal::getWeight))
                 .orElse(null));
     }
 
     public <T extends Animal> T findLightestAnimalForSpecies(Class<T> animalClass) {
-        return animalClass.cast(animalHashMap.get(animalClass).stream()
+        if(!animalHashMap.containsKey(animalClass)){
+            return null;
+        }
+        return animalClass.cast(animalHashMap.get(animalClass)
+                .stream()
                 .min(Comparator.comparingDouble(Animal::getWeight))
                 .orElse(null));
     }
 
-
     public TailedAnimal findLongestAnimalTail() {
-        return animalHashMap.values().stream()
-                .flatMap(Collection::stream)
-                .filter(TailedAnimal.class::isInstance)
-                .map(TailedAnimal.class::cast)
+        return getSuperClassStream(TailedAnimal.class)
                 .max(Comparator.comparingDouble(TailedAnimal::getTailLength))
                 .orElse(null);
     }
 
+
     public WingedAnimal findLargerAnimalWingspan() {
-        return animalHashMap.values().stream()
-                .flatMap(Collection::stream)
-                .filter(WingedAnimal.class::isInstance)
-                .map(WingedAnimal.class::cast)
+        return getSuperClassStream(WingedAnimal.class)
                 .max(Comparator.comparingDouble(WingedAnimal::getWingspan))
                 .orElse(null);
     }
+
+    private <T extends Animal> Stream<T> getSuperClassStream(Class<T> animalSuperClass) {
+        return animalHashMap.entrySet()
+                .stream()
+                .filter(entryAnimalMap -> animalSuperClass.isAssignableFrom(entryAnimalMap.getKey()))
+                .map(Map.Entry::getValue)
+                .flatMap(Collection::stream)
+                .map(animalSuperClass::cast);
+    }
+
+    /*private <T extends Animal> Stream<T> getSuperClassStream(Class<T> animalSuperClass) {
+        return animalHashMap.values()
+                .stream()
+                .flatMap(Collection::stream)
+                .filter(animalSuperClass::isInstance)
+                .map(animalSuperClass::cast);
+    }*/
 
 }
 

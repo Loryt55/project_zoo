@@ -9,8 +9,10 @@ import java.time.LocalDate;
 import java.util.logging.Logger;
 
 public class Main {
-    static Logger logger = Logger.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
+
+        Logger logger = Logger.getLogger(Main.class.getName());
 
         Zoo zoo = new Zoo();
 
@@ -36,39 +38,42 @@ public class Main {
         zoo.putAnimal(eagle2);
         zoo.putAnimal(eagle3);
 
-        Lion highestLion = zoo.findHighestAnimalForSpecies(Lion.class);
-        Tiger highestTiger = zoo.findHighestAnimalForSpecies(Tiger.class);
-        Eagle highestEagle = zoo.findHighestAnimalForSpecies(Eagle.class);
+        String msgHighestLion = "Il leone piu alto " +  zoo.findHighestAnimalForSpecies(Lion.class);
+        String msgHighestTiger = "La tigre piu alta " +  zoo.findHighestAnimalForSpecies(Tiger.class);
+        String msgHighestEagle = "L'aquila piu alta " + zoo.findHighestAnimalForSpecies(Eagle.class);
 
-        Lion lowestLion = zoo.findLowestAnimalForSpecies(Lion.class);
-        Tiger lowestTiger = zoo.findLowestAnimalForSpecies(Tiger.class);
-        Eagle lowestEagle = zoo.findLowestAnimalForSpecies(Eagle.class);
+        String msgLowestLion = "Il leone piu basso " + zoo.findLowestAnimalForSpecies(Lion.class);
+        String msgLowestTiger = "La tigre piu bassa " + zoo.findLowestAnimalForSpecies(Tiger.class);
+        String msgLowestEagle = "L'aquila piu bassa " + zoo.findLowestAnimalForSpecies(Eagle.class);
 
-        Lion heavierLion = zoo.findHeavierAnimalForSpecies(Lion.class);
-        Tiger heavierTiger = zoo.findHeavierAnimalForSpecies(Tiger.class);
-        Eagle heavierEagle = zoo.findHeavierAnimalForSpecies(Eagle.class);
+        String msgHeavierLion = "Il leone piu pesante " + zoo.findHeavierAnimalForSpecies(Lion.class);
+        String msgHeavierTiger = "La tigre piu pesante " + zoo.findHeavierAnimalForSpecies(Tiger.class);
+        String msgHeavierEagle = "L'aquila piu pesante " + zoo.findHeavierAnimalForSpecies(Eagle.class);
 
-        Lion lightestLion = zoo.findLightestAnimalForSpecies(Lion.class);
-        Tiger lightestTiger = zoo.findLightestAnimalForSpecies(Tiger.class);
-        Eagle lightestEagle = zoo.findLightestAnimalForSpecies(Eagle.class);
+        String msgLightestLion = "Il leone piu leggero " + zoo.findLightestAnimalForSpecies(Lion.class);
+        String msgLightestTiger = "La tigre piu leggera " + zoo.findLightestAnimalForSpecies(Tiger.class);
+        String msgLightestEagle = "L'aquila piu leggera " + zoo.findLightestAnimalForSpecies(Eagle.class);
 
-        logger.info("Il leone piu alto è: " + highestLion.getName());
-        logger.info("La tigre piu alta è: " + highestTiger.getName());
-        logger.info("L'aquila piu alta è: " + highestEagle.getName() + "\n");
+        String msgLongestAnimalTail = "L'animale con la coda più lunga " + zoo.findLongestAnimalTail();
+        String msgLargerAnimalWingspan = "L'animale con l'apertura alare più ampia " + zoo.findLargerAnimalWingspan();
 
-        logger.info("Il leone piu basso è: " + lowestLion.getName());
-        logger.info("La tigre piu bassa è: " + lowestTiger.getName());
-        logger.info("L'aquila piu bassa è: " + lowestEagle.getName() + "\n");
+        logger.info(msgHighestLion);
+        logger.info(msgHighestTiger);
+        logger.info(msgHighestEagle + "\n");
 
-        logger.info("Il leone piu pesante è: " + heavierLion.getName());
-        logger.info("La tigre piu pesante è: " + heavierTiger.getName());
-        logger.info("L'aquila piu pesante è: " + heavierEagle.getName() + "\n");
+        logger.info(msgLowestLion);
+        logger.info(msgLowestTiger);
+        logger.info(msgLowestEagle + "\n");
 
-        logger.info("Il leone piu leggero è: " + lightestLion.getName());
-        logger.info("La tigre piu leggera è: " + lightestTiger.getName());
-        logger.info("L'aquila piu leggera è: " + lightestEagle.getName() + "\n");
+        logger.info(msgHeavierLion);
+        logger.info(msgHeavierTiger);
+        logger.info(msgHeavierEagle + "\n");
 
-        logger.info("L'animale con la coda più lunga è: " + zoo.findLongestAnimalTail().getName());
-        logger.info("L'animale con l'apertura alare più ampia è: " + zoo.findLargerAnimalWingspan().getName());
+        logger.info(msgLightestLion);
+        logger.info(msgLightestTiger);
+        logger.info(msgLightestEagle + "\n");
+
+        logger.info(msgLongestAnimalTail);
+        logger.info(msgLargerAnimalWingspan);
     }
 }
