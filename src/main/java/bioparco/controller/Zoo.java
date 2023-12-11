@@ -92,7 +92,7 @@ public class Zoo {
                 .map(animalSuperClass::cast);
     }
 
-    /*private <T extends Animal> Stream<T> getSuperClassStream(Class<T> animalSuperClass) {
+    /* private <T extends Animal> Stream<T> getSuperClassStream(Class<T> animalSuperClass) {
         return animalHashMap.values()
                 .stream()
                 .flatMap(Collection::stream)
